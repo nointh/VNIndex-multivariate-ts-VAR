@@ -1,0 +1,60 @@
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<style>
+    form{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label, input, select{
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+</style>
+<html>
+    <h1 style="text-align: center; margin: 10px">Prediction</h1>
+    <form action="/predict" method="post" class="row mx-auto w-75">
+        <div class="row">
+            <div class="col-3 input-group">
+                <label class='input-group-text' for="id">Predicted date</label>
+                <input class="form-control" type="date" name="start_date" value="now">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 input-group">
+                <label class='input-group-text' for="id">Duration</label>
+                <input class="form-control" type="number" name="duration" value="1" min="1">
+            </div>
+        </div>
+        
+            
+        <input class="btn btn-primary" type="submit" value="Send">
+    </form>
+</html>
+<!-- 
+['loan_amnt', 'int_rate', 'installment', 'annual_inc', 'loan_status',
+       'dti', 'open_acc', 'pub_rec', 'revol_bal', 'revol_util', 'total_acc',
+       'pub_rec_bankruptcies', 'term_ 60 months', 'sub_grade_A2',
+       'sub_grade_A3', 'sub_grade_A4', 'sub_grade_A5', 'sub_grade_B1',
+       'sub_grade_B2', 'sub_grade_B3', 'sub_grade_B4', 'sub_grade_B5',
+       'sub_grade_C1', 'sub_grade_C2', 'sub_grade_C3', 'sub_grade_C4',
+       'sub_grade_C5', 'sub_grade_D1', 'sub_grade_D2', 'sub_grade_D3',
+       'sub_grade_D4', 'sub_grade_D5', 'sub_grade_E1', 'sub_grade_E2',
+       'sub_grade_E3', 'sub_grade_E4', 'sub_grade_E5', 'sub_grade_F1',
+       'sub_grade_F2', 'sub_grade_F3', 'sub_grade_F4', 'sub_grade_F5',
+       'sub_grade_G1', 'sub_grade_G2', 'sub_grade_G3', 'sub_grade_G4',
+       'sub_grade_G5', 'home_ownership_MORTGAGE', 'home_ownership_NONE',
+       'home_ownership_OTHER', 'home_ownership_OWN', 'home_ownership_RENT',
+       'verification_status_Source Verified', 'verification_status_Verified',
+       'purpose_credit_card', 'purpose_debt_consolidation',
+       'purpose_educational', 'purpose_home_improvement', 'purpose_house',
+       'purpose_major_purchase', 'purpose_medical', 'purpose_moving',
+       'purpose_other', 'purpose_renewable_energy', 'purpose_small_business',
+       'purpose_vacation', 'purpose_wedding', 'initial_list_status_w',
+       'application_type_INDIVIDUAL', 'application_type_JOINT',
+       'mort_acc_amnt_1-6', 'mort_acc_amnt_7-14', 'mort_acc_amnt_more-15',
+       'mort_acc_amnt_unknown', 'zip_code_05113', 'zip_code_11650',
+       'zip_code_22690', 'zip_code_29597', 'zip_code_30723', 'zip_code_48052',
+       'zip_code_70466', 'zip_code_86630', 'zip_code_93700'] -->
